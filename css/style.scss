@@ -1,0 +1,63 @@
+// variables
+@import "variables";
+
+/* reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* color fondo */
+    font-family: $font1;
+}
+
+// reloj
+.reloj {
+    // modificacion
+    display: flex;
+    justify-content: center;
+    // size 
+    padding-top: 20%;
+}
+.reloj__hora {
+    // modificacion
+    display: flex;
+    // size 
+    font-size: 80px;
+
+}
+.reloj__fecha {
+    // modificacion
+    display: flex;
+    // size
+    padding-left: 30px;
+    font-size: 20px;
+    
+    div {
+        padding-right: 4px;
+    }
+}
+
+// night
+.backgroundNight {
+    background-image: url("/img/luna.jpg");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-color: $color1;
+}
+.textNight {
+    color: $color4;
+}
+.textNight2 {
+    color: $color5;
+}
+// day
+.backgroundDay {
+    background-image: url("/img/");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+.textDay {
+    color: $color2;
+}
