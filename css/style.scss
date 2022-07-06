@@ -9,6 +9,7 @@
 }
 body {
     /* color fondo */
+    background-color: $color1;
     font-family: $font1;
 }
 
@@ -39,25 +40,59 @@ body {
     }
 }
 
+// forma day night
+.forma {
+    // modificacion
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    right:calc(50% - 100px);
+    // size
+    top: 16%;
+    right: 14%;
+    width: 200px;
+    height: 200px;
+}
 // night
-.backgroundNight {
-    background-image: url("../img/luna.jpg");
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-color: $color1;
+.luna {
+    // color
+    box-shadow:0px 0px 100px #FFFF8C;
+    background-color: $color5;
+    // animate
+    animation: moonAnimate 3s infinite;
+    
+}
+
+@keyframes moonAnimate {
+     0% { box-shadow: 0px 0px 100px #FFF; }
+     50% { box-shadow: 0px 0px 140px #FFF; }
+     100% { box-shadow: 0px 0px 100px #FFF; } 
 }
 .textNight {
-    color: $color4;
-}
-.textNight2 {
     color: $color5;
 }
-// day
-.backgroundDay {
-    background-image: url("/img/");
-    background-repeat: no-repeat;
-    background-position: 100%;
+.textNight2 {
+    color: $color6;
 }
+// day
+.sol {
+    // color
+    box-shadow:0px 0px 100px $color3;
+    background-color: $color4;
+    // animate
+    animation: solAnimate 3s infinite;
+    
+}
+
+@keyframes solAnimate {
+     0% { box-shadow: 0px 0px 100px $color3; }
+     50% { box-shadow: 0px 0px 140px $color3; }
+     100% { box-shadow: 0px 0px 100px $color3; } 
+}
+
 .textDay {
-    color: $color2;
+    color: $color3;
+}
+.textDay2 {
+    color: $color4;
 }
