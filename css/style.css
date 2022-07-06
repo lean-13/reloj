@@ -41,7 +41,7 @@ body {
 }
 
 .backgroundNight {
-  background-image: url("/img/luna.jpg");
+  background-image: url("https://github.com/lean-13/reloj/blob/master/img/luna.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: 100%;
   background-color: black;
