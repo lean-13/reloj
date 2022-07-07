@@ -16,6 +16,7 @@ $(document).ready(function () {
     let cambioBackground = () => {
 
         let background = $('.forma');
+        let background2 = $('.forma2')
 
         if (hour > 13) {
             $(background).removeClass('moon');
@@ -29,13 +30,13 @@ $(document).ready(function () {
     
     let actualizarReloj = () => {
 
-
         let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
         let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
         // hour
         $(Phour).text(hour);
         // minutes
+        if (minutes < 10) { minutes = "0" + minutes }
         $(Pminutes).text(minutes);
         // day
         $(Pday).text(semana[day]);
@@ -43,6 +44,8 @@ $(document).ready(function () {
         $(Pmonth).text(meses[month]);
         // year
         $(Pyear).text(year);
+
+        
 
     }
 
