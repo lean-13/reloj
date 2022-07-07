@@ -18,11 +18,33 @@ $(document).ready(function () {
         let background = $('.forma');
         let background2 = $('.forma2')
 
-        if (hour > 13) {
+        // luna
+        let ocultarMoon = () => {
+            $(background).fadeOut(800);
             $(background).removeClass('moon');
-            $(background).addClass('sol');
-        }else {
+        }
+        let mostrarMoon = () => {
             $(background).addClass('moon');
+            $(background).fadeIn(800);
+        }
+        // sol
+        let mostrarSol = () => {
+            $(background).addClass('sol');
+            $(background).fadeIn(800);
+        }
+        let ocultarSol = () => {
+            $(background).fadeOut(800);
+            $(background).removeClass('sol')
+        }
+
+        // cambio de background
+        let prueba = 9;
+        if (prueba > 7) {
+            ocultarMoon();
+            mostrarSol();
+        }else {
+            ocultarSol();
+            mostrarMoon();
         }   
 
     }
