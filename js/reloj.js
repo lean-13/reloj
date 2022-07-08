@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     let start = () => {
         
-        particlesJS.load('particles-js', '../json/particlesjs.json', function() {
+        particlesJS.load('particles-js', '../json/particlesjsNight.json', function() {
             console.log('callback - particles.js config loaded');
         });
     }
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
         // cambio de background
         let prueba = 6;
-        if (prueba > 7) {
+        if (hour > 7) {
             ocultarMoon();
             mostrarSol();
         }else {
