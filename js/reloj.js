@@ -13,6 +13,14 @@ $(document).ready(function () {
     let month = time.getMonth();
     let year = time.getFullYear();
 
+    let start = () => {
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', '../json/particlesjs.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    }
+    
+    
     let cambioBackground = () => {
 
         let background = $('.forma');
@@ -38,18 +46,19 @@ $(document).ready(function () {
         }
 
         // cambio de background
-        let prueba = 9;
+        let prueba = 6;
         if (prueba > 7) {
             ocultarMoon();
             mostrarSol();
         }else {
             ocultarSol();
             mostrarMoon();
+            start();
         }   
 
     }
 
-    
+
     let actualizarReloj = () => {
 
         let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];

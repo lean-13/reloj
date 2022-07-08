@@ -12,12 +12,19 @@ body {
     background-color: $color1;
     font-family: $font1;
 }
-
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
 // reloj
 .reloj {
     // modificacion
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 10;
     // size 
     padding-top: 20%;
 }
@@ -75,6 +82,16 @@ body {
 .textNight2 {
     color: $color6;
 }
+
+// estrella
+.star {
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.6);
+    position: absolute;
+}  
 // day
 .sol {
     // color
