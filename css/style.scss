@@ -13,10 +13,13 @@ body {
     font-family: $font1;
 }
 #particles-js {
-    width: 100%;
-    height: 100%;
+    // modificacion
     position: fixed;
     z-index: -1;
+    // size
+    width: 100%;
+    height: 100%;
+    top: 0;
 }
 // reloj
 .reloj {
