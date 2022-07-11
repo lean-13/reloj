@@ -20,7 +20,7 @@ $(document).ready(function () {
         });
     }
     let cloud = () => {
-        particlesJS.load('particles-js', '../json/particlesjsNight.json', function() {
+        particlesJS.load('particles-js', '../json/particlesjsDay.json', function() {
             console.log('callback - particles.js config loaded');
         });
     }
