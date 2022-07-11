@@ -24,7 +24,8 @@ $(document).ready(function () {
             console.log('callback - particles.js config loaded');
         });
     }
-    
+
+
     let cambioBackground = () => {
 
         let background = $('.forma');
