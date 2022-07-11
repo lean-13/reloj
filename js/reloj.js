@@ -19,12 +19,15 @@ $(document).ready(function () {
             console.log('callback - particles.js config loaded');
         });
     }
-    
+    let cloud = () => {
+        particlesJS.load('particles-js', '../json/particlesjsDay.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    }
     
     let cambioBackground = () => {
 
         let background = $('.forma');
-        let background2 = $('.forma2')
 
         // luna
         let ocultarMoon = () => {
@@ -50,6 +53,7 @@ $(document).ready(function () {
         if (hour > 7) {
             ocultarMoon();
             mostrarSol();
+            cloud();
         }else {
             ocultarSol();
             mostrarMoon();
