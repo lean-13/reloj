@@ -29,7 +29,8 @@ $(document).ready(function () {
     let cambioBackground = () => {
 
         let background = $('.forma');
-
+        let text = $('.reloj__hora')
+        let text2 = $('.reloj__fecha')
         // luna
         let ocultarMoon = () => {
             $(background).fadeOut(800);
@@ -38,6 +39,21 @@ $(document).ready(function () {
         let mostrarMoon = () => {
             $(background).addClass('moon');
             $(background).fadeIn(800);
+        }
+        // text
+        let textMoon = () => {
+            $(text).removeClass('textDay');
+            $(text).addClass('textNight');
+            $(text).fadeIn(800);
+        }
+        let textMoon2 = () => {
+            $(text).removeClass('textDay2');
+            $(text2).addClass('textNight2');
+            $(text2).fadeIn(800);
+        }
+        let textNight = () => {
+            textMoon();
+            textMoon2();
         }
         // sol
         let mostrarSol = () => {
@@ -48,16 +64,33 @@ $(document).ready(function () {
             $(background).fadeOut(800);
             $(background).removeClass('sol')
         }
+        // text
+        let textSol = () => {
+            $(text).removeClass('textNight');
+            $(text).addClass('textDay');
+            $(text).fadeIn(800);
+        }
+        let textSol2 = () => {
+            $(text).removeClass('textNight2');
+            $(text2).addClass('textDay2');
+            $(text2).fadeIn(800);
+        }
+        let textDay = () => {
+            textSol();
+            textSol2();
+        }
 
         // cambio de background
         let prueba = 6;
         if (hour > 7) {
             ocultarMoon();
             mostrarSol();
+            textDay();
             cloud();
         }else {
             ocultarSol();
             mostrarMoon();
+            textNight();
             start();
         }   
 
